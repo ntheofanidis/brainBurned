@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Atlas.tres" type="TileSet" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0.462745, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 0, 1 )
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 128, 128 )
+cell_quadrant_size = 32
+cell_custom_transform = Transform2D( 128, 0, 0, 128, 0, 0 )
+compatibility_mode = true
+format = 1
+tile_data = PoolIntArray( 0, 0, 262150, 1, 0, 262150, 2, 0, 262150, 3, 0, 262150, 4, 0, 262150, 5, 0, 262150, 6, 0, 262150, 7, 0, 262150, 8, 0, 262150, 65536, 0, 262150, 65544, 0, 262150, 131072, 0, 262150, 131080, 0, 262150, 196608, 0, 262150, 196616, 0, 262150, 262144, 0, 262150, 327680, 0, 262150, 327688, 0, 262150, 393216, 0, 262150, 393224, 0, 262150, 458752, 0, 262150, 458760, 0, 262150, 524288, 0, 262150, 524289, 0, 262150, 524290, 0, 262150, 524291, 0, 262150, 524292, 0, 262150, 524293, 0, 262150, 524294, 0, 262150, 524295, 0, 262150, 524296, 0, 262150 )
