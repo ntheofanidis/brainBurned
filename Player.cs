@@ -1,11 +1,12 @@
 using Godot;
 using System;
 
-public class Player : Area2D
+public class Player : KinematicBody2D
 {
 	[Export]
-	public int Speed = 400;
+	public int Speed = 1400;
 	private Vector2 _screenSize;
+
 
 	public override void _Ready()
 	{
@@ -31,6 +32,11 @@ public class Player : Area2D
 			animatedSprite.Stop();
 		}
 		
-		Position += velocity * delta;
+		if (velocity.x != 0)
+		{
+			animatedSprite.FlipH = velocity.x > 0;
+		}
+		
+		velocity = MoveAndSlide(velocity, new Vector2(0, -1));
 	}
 }
